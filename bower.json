@@ -1,0 +1,17 @@
+{
+  "name": "samp-formcreate",
+  "version": "0.0.0",
+  "authors": [
+    "Evan Carroll <evanc@norchemlab.com>"
+  ],
+  "description": "Create arbitrary forms with bower and bootstrap",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

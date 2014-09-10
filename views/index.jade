@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+head
+	link(rel="stylesheet", href="/bower_components/bootstrap/dist/css/bootstrap.min.css")
+	link(rel="stylesheet", href="/bower_components/formbuilder/dist/formbuilder-min.css")
+	link(rel="stylesheet", href="/bower_components/formbuilder/vendor/css/vendor.css")
+	//- script(type="text/javascript", src="/bower_components/jquery/jquery.min.js")
+	//- script(type="text/javascript", src="/bower_components/underscore/underscore-min.js")
+	//- script(type="text/javascript", src="/bower_components/backbone/backbone.js")
+	//- script(type="text/javascript", src="/bower_components/backbone-deep-model/distribution/deep-model.min.js")
+	//- script(type="text/javascript", src="/bower_components/rivets/dist/rivets.min.js")
+	script(type="text/javascript", src="/bower_components/formbuilder/vendor/js/vendor.js")
+	script(type="text/javascript", src="/bower_components/formbuilder/dist/formbuilder-min.js")
+	title foobar
+body
+	header
+		span This is an example of <a href="https://github.com/dobtco/formbuilder" target="_new">Form Builder</a>.
+	.container
+		div#formbuilder
+			span test
+	script(type="text/javascript").
+		"use strict";
+		$(document).ready(function () {
+			var builder = new Formbuilder({ selector: '#formbuilder' });
+			builder.on('save', function(f) {
+				console.log(f);
+			});
+		});
