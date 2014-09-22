@@ -22,7 +22,7 @@ body
 		"use strict";
 		$(document).ready(function () {
 			var builder = new Formbuilder({ selector: '#formbuilder' });
-			builder.on('save', function(f) {
-				console.log(f);
+			builder.on('save', function(payload) {
+				$.ajax({ url: '/ajax', data: blob, type: 'POST' });
 			});
 		});

@@ -1,0 +1,13 @@
+{
+  "name": "formbuilder-min",
+  "_cacheHeaders": {
+    "ETag": "\"38d37fc4598ad8929283e30bbf4da63c\"",
+    "Content-Type": "text/html; charset=utf-8"
+  },
+  "_release": "e-tag:38d37fc45",
+  "main": "index.css",
+  "_source": "https://github.com/dobtco/formbuilder/blob/gh-pages/dist/formbuilder-min.css",
+  "_target": "*",
+  "_originalSource": "https://github.com/dobtco/formbuilder/blob/gh-pages/dist/formbuilder-min.css",
+  "_direct": true
+}

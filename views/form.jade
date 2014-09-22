@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+head
+	link(rel="stylesheet", href="/bower_components/bootstrap/dist/css/bootstrap.min.css")
+	link(rel="stylesheet", href="/bower_components/formbuilder/dist/formbuilder-min.css")
+	link(rel="stylesheet", href="/bower_components/formbuilder/vendor/css/vendor.css")
+	//- script(type="text/javascript", src="/bower_components/jquery/jquery.min.js")
+	//- script(type="text/javascript", src="/bower_components/underscore/underscore-min.js")
+	//- script(type="text/javascript", src="/bower_components/backbone/backbone.js")
+	//- script(type="text/javascript", src="/bower_components/backbone-deep-model/distribution/deep-model.min.js")
+	//- script(type="text/javascript", src="/bower_components/rivets/dist/rivets.min.js")
+	script(type="text/javascript", src="/bower_components/formbuilder/vendor/js/vendor.js")
+	script(type="text/javascript", src="/bower_components/formbuilder/dist/formbuilder-min.js")
+	title foobar
+body
+	style(type='text/css').
+		.fb-left, .fb-save-wrapper { display:none }
+		.fb-main { width: 100%; max-width: 100% }
+		.fb-right { margin: 0 }
+		.actions-wrapper { display:none !important }
+	.content
+		.fb-main
+
+		h2 RENDERED FORM
+		iframe.rendered-form
+	script.
+		var fb = new Formbuilder({
+			selector: '.fb-main',
+			bootstrapData: !{form}
+		});
+		console.log(fb);
+		fb.on('save', function(payload) {
+			$.post('/ajax', function(res) {
+				$(".rendered-form").contents().html(res);
+			});
+		);
